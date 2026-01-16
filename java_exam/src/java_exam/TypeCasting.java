@@ -1,0 +1,50 @@
+package java_exam;
+
+public class TypeCasting {
+
+	public static void main(String[] args) {
+		{int num = 10;
+		float fnum = 10;
+		double dnum = 10;
+		
+		System.out.println(num);
+		System.out.println(fnum);
+		System.out.println(dnum);
+		}
+		{float fnum = 10.9f;
+		int num = (int) fnum;
+		System.out.println(fnum);
+		System.out.println(num);
+		
+		double dnum = 11.15;
+		num = (int)dnum;
+		System.out.println(dnum);
+		System.out.println(num);}
+		
+		{double dnum = 10.1;
+		
+		dnum = Math.ceil(dnum);
+		System.out.println(dnum);}
+		
+		{double dnum = 10.1;
+		dnum = Math.floor(dnum);
+		System.out.println(dnum);}
+		
+		{double dnum = 10.1;
+		dnum = Math.round(dnum);
+		System.out.println(dnum);}
+		
+		double dnum = 29.37;
+		double dnum2 = dnum * 10;
+		System.out.println(dnum2);
+		
+		dnum2 = Math.round(dnum2);
+		System.out.println(dnum2);
+		
+		double dnum3 = dnum2 / 10;
+		System.out.println(dnum3);
+		
+
+	}
+
+}
