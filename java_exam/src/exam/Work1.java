@@ -3,21 +3,19 @@ package exam;
 public class Work1 {
 
 	public static void main(String[] args) {
-		int num = 2;
-		while(num <= 100000) {
-			boolean isPrime = true;
-			int i = 2;
+		boolean isPrime = true;
+		for(int num = 2; num <= 100_000; num++) {
+			isPrime = true;
 			
-			while(i*i <=num) {
+			for(int i = 2; i*i<=num; i++) {
 				if(num % i ==0) {
 					isPrime = false;
 					break;
 				}
-				i++;
 			}
-			if(isPrime) {System.out.println(num);
+			if(isPrime) {
+				System.out.println(num);
 			}
-			num++;
 		}
-	}
+		}
 }

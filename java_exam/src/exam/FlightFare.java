@@ -1,6 +1,15 @@
 package exam;
 
 public class FlightFare {
+	
+	public static int getFlightFare(int age) {
+		if(age >= 19) {
+			return 300_000;
+		}
+		else{
+			return 100_000;
+		}
+	}
 
 	public static void main(String[] args) {
 		int money = 1_000_000;
@@ -14,24 +23,10 @@ public class FlightFare {
 		
 		//Case 1.비행 요금을 계산
 		int flightFare = 0;
-		if (father >= 19) {
-			flightFare += adultOneWayFlightFare;
-		}
-		else {
-			flightFare += kidOneWayFlightFare;
-		}
-		if (mother >= 19) {
-			flightFare += adultOneWayFlightFare;
-		}
-		else {
-			flightFare += kidOneWayFlightFare;
-		}
-		if (daughter >= 19) {
-			flightFare += adultOneWayFlightFare;
-		}
-		else {
-			flightFare += kidOneWayFlightFare;
-		}
+		flightFare = getFlightFare(father);
+		flightFare = getFlightFare(mother);
+		flightFare = getFlightFare(daughter);
+		
 		if (flightFare > money) {
 			System.out.println("다음에 가자");
 		}
