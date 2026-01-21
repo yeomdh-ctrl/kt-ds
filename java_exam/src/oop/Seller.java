@@ -12,7 +12,7 @@ public class Seller {
 			return 0;
 		}
 		else if(count > stock) {
-			sellCount = stock;
+			sellCount = stock; //판매자가 소지한 상품의 개수보다 더 많은 개수의 상품을 판매하려 할 경우, 남은 모든 재고를 판매
 		}
 		else {
 			sellCount = count;
