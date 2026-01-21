@@ -11,6 +11,7 @@ public class WaterTest {
 		water.dispenseWater(40);
 		water.fillWater(20);
 		water.dispenseWater(20);
+		
 
 	}
 

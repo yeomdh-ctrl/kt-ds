@@ -15,7 +15,7 @@ public class Water {
 	}
 	public void fillWater(int amount) {
 		waterAmount += amount;
-		System.out.println(amount + "의 물을 채웠음");
+		System.out.println(amount + "ml의 물을 채웠음");
 	}
 	public void dispenseWater(int amount) {
 		if(!power) {
@@ -27,7 +27,7 @@ public class Water {
 			if(amount < 0) {
 				amount = 0;
 			}
-			System.out.println(amount + "의 물이 나왔음");
+			System.out.println(amount + "ml의 물이 나왔음");
 		}
 		else {
 			System.out.println("물이 부족함");
