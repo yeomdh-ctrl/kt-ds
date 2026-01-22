@@ -6,6 +6,11 @@ public class CraneGameMachine {
 	boolean isInsertCoin;
 	int dolls;
 	
+	public CraneGameMachine(boolean isInsertCoin, int dolls) {
+		this.isInsertCoin = isInsertCoin;
+		this.dolls = dolls;
+	}
+	
 	public void insertCoin() {
 		if(dolls > 0) {
 			isInsertCoin = true;

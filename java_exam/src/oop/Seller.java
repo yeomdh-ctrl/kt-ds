@@ -6,6 +6,12 @@ public class Seller {
 	int stock;
 	int sellCount;
 	
+	public Seller(int money, int stock, int sellCount) {
+		this.money = money;
+		this.stock = stock;
+		this.sellCount = sellCount;
+	}
+	
 	public int sellCount(int count) {
 		if(stock == 0) {
 			System.out.println("품절되었습니다");
