@@ -46,4 +46,4 @@ public class Consumer {
         System.out.println("장바구니 무게: " + (itemCount * itemWeight) + "g");
         System.out.println("남은 돈: " + money);
     }
-}
+}    
