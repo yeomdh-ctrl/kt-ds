@@ -22,6 +22,11 @@ public class Coffee {
 		this.stock = stock;
 	}
 	
+	public static boolean isPositiveNumber(int number) {
+//		System.out.println(this.stock); this 사용 불가능
+		return number > 0;
+	}
+	
 	// getter : Coffee 클래스 외부로 멤버 변수의 값을 노출시키는 코드
 	// setter : 외부에서 Coffee 클래스 내부로 멤버 변수의 값을 변경시키는 코드
 	
@@ -41,6 +46,7 @@ public class Coffee {
 		this.price = price;
 	}
 	public void setStock(int stock) {
+		if(Coffee.isPositiveNumber(stock))
 		this.stock = stock;
 	}
 }

@@ -4,7 +4,7 @@ public class RestaurantTest {
 
     public static void main(String[] args) {
 
-        // 식당 2개 (기준 다름)
+        // 식당 2개
         Restaurant res1 = new Restaurant("한식집");
         Restaurant res2 = new Restaurant("술집");
 

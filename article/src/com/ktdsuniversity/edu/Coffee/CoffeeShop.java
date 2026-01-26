@@ -11,8 +11,16 @@ public class CoffeeShop {
 	 * 커피숍에서 파는 차가운 아메리카노
 	 */
 	 private Coffee ice;
+	 //생성자 오버로딩
+	 public CoffeeShop() {
+//		 this.hot = new Coffee("기본 아메리카노", 1500, 30);
+//		 this.ice = new Coffee("아이스 아메리카노", 1500, 50);
+//		 this() 를 사용해 밑에 있는 hot , ice 를 받아옴.
+		 this(new Coffee("기본 아메리카노", 1500, 30)
+			 ,new Coffee("아이스 아메리카노", 1500, 50));
+	 }
 	
-	public CoffeeShop(Coffee hot, Coffee ice) {
+	 public CoffeeShop(Coffee hot, Coffee ice) {
 		this.hot = hot;
 		this.ice = ice;
 	}
@@ -27,6 +35,24 @@ public class CoffeeShop {
 	}
 	public void setHot(Coffee hot) {
 		this.hot = hot;
+	}
+	//메소드 오버로딩
+	/**
+	 * 가장 첫 번째 메뉴를 한 개 주문한다.
+	 * @return
+	 */
+	public int orederCoffee() {
+		int price = this.orderCoffee(1);
+		return price;
+	}
+	/**
+	 * 메뉴 한개만 주문한다.
+	 * @param menu
+	 * @return
+	 */
+	public int orderCoffee(int menu) {
+		int price = this.orderCoffee(menu , 1);
+		return price;
 	}
 	
 	/**

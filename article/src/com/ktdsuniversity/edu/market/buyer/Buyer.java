@@ -33,13 +33,13 @@ public class Buyer {
 	public void setMaxCartWeight(int maxCartWeight) {
 		this.maxCartWeight = maxCartWeight;
 	}
-	public void nowCartWeight(int nowCartWeight) {
+	public void setNowCartWeight(int nowCartWeight) {
 		this.nowCartWeight = nowCartWeight;
 	}
-	public void itemCount(int itemCount) {
+	public void setItemCount(int itemCount) {
 		this.itemCount = itemCount;
 	}
-	public void wallet(int wallet) {
+	public void setWallet(int wallet) {
 		this.wallet = wallet;
 	}
 
