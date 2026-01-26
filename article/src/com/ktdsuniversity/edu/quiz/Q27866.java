@@ -9,7 +9,7 @@ public class Q27866 {
 		Scanner sc = new Scanner(System.in);
 		String word = sc.nextLine();
 		int i = sc.nextInt();		
-		System.out.println(word.charAt(i));
+		System.out.println(word.charAt(i -1));
 	}
 
 }
