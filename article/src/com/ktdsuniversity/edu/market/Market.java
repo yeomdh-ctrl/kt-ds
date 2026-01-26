@@ -1,5 +1,5 @@
 package com.ktdsuniversity.edu.market;
-import com.ktdsuniversity.edu.market.seller2.Seller;
+import com.ktdsuniversity.edu.market.seller2.Seller2;
 import com.ktdsuniversity.edu.market.buyer.Buyer;
 
 
@@ -8,7 +8,7 @@ public class Market {
 		
 		
 		Buyer buyer = new Buyer(5000, 3000);
-		Seller seller = new Seller(30);
+		Seller2 seller = new Seller2(30);
 		
 		//구매자가 판매자에게 제품을 5개 구매한다.
 		buyer.buyFrom(seller, 5);

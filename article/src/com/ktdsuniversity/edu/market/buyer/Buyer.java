@@ -1,5 +1,5 @@
 package com.ktdsuniversity.edu.market.buyer;
-import com.ktdsuniversity.edu.market.seller2.Seller;
+import com.ktdsuniversity.edu.market.seller2.Seller2;
 public class Buyer {
 
 
@@ -57,7 +57,7 @@ public class Buyer {
 	 * @param productCount 구매자가 구매할 상품의 개수
 	 */
 	
-	public void buyFrom(Seller seller, int productCount) {
+	public void buyFrom(Seller2 seller, int productCount) {
 		
 		// 1. 구매자:혹시 두쫀쿠 productCount 만큼 있나요?
 		if(seller.isEnoughStock(productCount)) {

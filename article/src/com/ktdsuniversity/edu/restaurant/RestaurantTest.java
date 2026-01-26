@@ -22,16 +22,16 @@ public class RestaurantTest {
         res1.order(c1, drink);
         res1.order(c1, drink);
 
-        System.out.println(c1 + "배부름: " + c1.getFullness());
-        System.out.println(c1 + "취함: " + c1.getDrunk());
+        System.out.println("배부름: " + c1.getFullness());
+        System.out.println("취함: " + c1.getDrunk());
 
         System.out.println("술집");
         res2.order(c1, drink);
         res2.order(c1, drink);
         res2.order(c1, drink);
 
-        System.out.println(c1 +"배부름: " + c1.getFullness());
-        System.out.println(c1 + "취함: " + c1.getDrunk());
+        System.out.println("배부름: " + c1.getFullness());
+        System.out.println("취함: " + c1.getDrunk());
     }
 }
 

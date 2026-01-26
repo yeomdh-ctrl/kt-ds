@@ -1,6 +1,6 @@
 package com.ktdsuniversity.edu.market.seller2;
 
-public class Seller {
+public class Seller2 {
 
 	// 1. 상수
 	// 2. 멤버변수
@@ -11,7 +11,7 @@ public class Seller {
 	private int stock;
 	private int account;
 	
-	public Seller(int stock) {
+	public Seller2(int stock) {
 		this.stock = stock;
 	}
 	
