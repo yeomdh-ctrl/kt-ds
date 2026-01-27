@@ -11,7 +11,7 @@ public class Q181875 {
         
         // 문자열 입력
         for (int i = 0; i < N; i++) {
-            strArr[i] = sc.next();
+            strArr[i] = sc.nextLine();
         }
         
         // 조건에 맞게 변환
