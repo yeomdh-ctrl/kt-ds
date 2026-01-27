@@ -15,5 +15,30 @@ public class Q11720 {
 		System.out.println(sum);
 		
 	}
-
-}
+}	
+//	public void case2(String numString) {
+//		
+//		
+//		int length = numString.length();
+//		int radix = 1;
+//		for(int i = 1; i <= length; i++) {
+//			radix *= 10;
+//		}
+//		
+//		long num = Long.parseLong(numString);
+//		int divResult = 0;
+//		int sum = 0;
+//		while(true) {
+//			divResult = (int)(num/radix);
+//			sum += divResult;
+//			
+//			num -= (divResult * radix);
+//			radix /= 10;
+//			if(radix == 0) {
+//				break;
+//			}
+//		}
+//		System.out.println(sum);
+//	}
+//
+//}

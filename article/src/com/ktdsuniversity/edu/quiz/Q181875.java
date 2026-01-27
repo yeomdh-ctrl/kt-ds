@@ -6,14 +6,9 @@ public class Q181875 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int N = sc.nextInt();          // 문자열 개수
-        String[] strArr = new String[N];
+        String[] strArr = sc.nextLine().split(" ");  // 한 줄 전체 입력
 
-        for (int i = 0; i < N; i++) {  // 문자열 입력
-            strArr[i] = sc.next();
-        }
-
-        for (int i = 0; i < N; i++) {  // 변환 + 출력
+        for (int i = 0; i < strArr.length; i++) {
             if (i % 2 == 0) {
                 System.out.print(strArr[i].toLowerCase() + " ");
             } else {
@@ -22,6 +17,7 @@ public class Q181875 {
         }
     }
 }
+
 
 
 
