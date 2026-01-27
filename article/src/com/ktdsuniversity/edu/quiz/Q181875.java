@@ -3,18 +3,25 @@ package com.ktdsuniversity.edu.quiz;
 import java.util.Scanner;
 
 public class Q181875 {
-    public String[] solution(String[] strArr) {
-        for (int i = 0; i < strArr.length; i++) {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int N = sc.nextInt();          // 문자열 개수
+        String[] strArr = new String[N];
+
+        for (int i = 0; i < N; i++) {  // 문자열 입력
+            strArr[i] = sc.next();
+        }
+
+        for (int i = 0; i < N; i++) {  // 변환 + 출력
             if (i % 2 == 0) {
-                // 짝수 인덱스 → 소문자
-                strArr[i] = strArr[i].toLowerCase();
+                System.out.print(strArr[i].toLowerCase() + " ");
             } else {
-                // 홀수 인덱스 → 대문자
-                strArr[i] = strArr[i].toUpperCase();
+                System.out.print(strArr[i].toUpperCase() + " ");
             }
         }
-        return strArr;
     }
 }
+
 
 
