@@ -1,5 +1,8 @@
 package com.ktdsuniversity.edu.vendingmachine;
 
+import com.ktdsuniversity.edu.vendingmachine.item.Drink;
+import com.ktdsuniversity.edu.vendingmachine.machine.DrinkVendingMachine;
+
 public class DrinkVendingMachineTest {
 
 	public static void main(String[] args) {
@@ -13,19 +16,19 @@ public class DrinkVendingMachineTest {
 		
 		lotte.printAllDrinkInfo();
 		
-		int price = lotte.pressDrinkButton(0, 3);
+		int price = lotte.pressDrinkButton(0, 3, 3000);
 		System.out.println(price);
 		
-		price = lotte.pressDrinkButton(1, 5);
+		price = lotte.pressDrinkButton(1, 5, 3000);
 		System.out.println(price);
 		
-		price = lotte.pressDrinkButton(2, 15);
+		price = lotte.pressDrinkButton(2, 15, 3000);
 		System.out.println(price);
 		
-		price = lotte.pressDrinkButton(3, 55);
+		price = lotte.pressDrinkButton(3, 55, 3000);
 		System.out.println(price);
 		
-		price = lotte.pressDrinkButton(4, 1);
+		price = lotte.pressDrinkButton(4, 1, 3000);
 		System.out.println(price);
 		
 		lotte.printAllDrinkInfo();

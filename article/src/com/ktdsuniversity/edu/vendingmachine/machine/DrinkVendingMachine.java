@@ -2,8 +2,18 @@ package com.ktdsuniversity.edu.vendingmachine.machine;
 
 import com.ktdsuniversity.edu.vendingmachine.item.Drink;
 public class DrinkVendingMachine {
-
-	Drink[] drinks;
+	
+	private int safe;
+	private int inputMoney;
+	
+	private Drink[] drinks;
+	
+	public int getInputMoney() {
+		return this.inputMoney;
+	}
+	public Drink[] getDrinks() {
+		return this.drinks;
+	}
 	
 	public DrinkVendingMachine( Drink drink1, Drink drink2, Drink drink3, Drink drink4 ) {
 		this.drinks = new Drink[4];
@@ -13,7 +23,8 @@ public class DrinkVendingMachine {
 		this.drinks[3] = drink4;
 	}
 	
-	public int pressDrinkButton(int drinkNumber, int pressCount) {
+	public int pressDrinkButton(int drinkNumber, int pressCount, int inputMoney) {
+		this.inputMoney = inputMoney;
 		if (drinkNumber < 0 || drinkNumber >= this.drinks.length) {
 			return 0;
 		}
@@ -31,6 +42,10 @@ public class DrinkVendingMachine {
 		
 		int stock = pressedDrink.getStock();
 		stock -= pressCount;
+		
+		this.safe += pressCount * pressedDrink.getPrice();
+		this.inputMoney -= pressCount * pressedDrink.getPrice();
+		
 		pressedDrink.setStock(stock);
 //		pressedDrink.stock -= pressCount;
 		return pressedDrink.getPrice() * pressCount;
@@ -51,7 +66,7 @@ public class DrinkVendingMachine {
 	
 	public void printAllDrinkInfo() {
 		for (int i = 0; i < this.drinks.length; i++) {
-			System.out.println(this.drinks[i].name + " " + this.drinks[i].stock + "개 남았습니다.");
+			System.out.println(this.drinks[i].getName() + " " + this.drinks[i].getStock() + "개 남았습니다.");
 		}
 	}
 	
