@@ -1,32 +1,23 @@
 package com.ktdsuniversity.edu.inheritancework;
 
 public class Customer {
-	private String name;
-	private int wallet;
+	private int money;
 	private int point;
 	private String grade;
 	
-	public Customer(String name, int wallet, int point, String grade) {
-		this.name = name;
-		this.wallet = wallet;
+	public Customer(int money, int point, String grade) {
+	
+		this.money = money;
 		this.point = point;
 		this.grade = grade;
 	}
 
-	public String getName() {
-		return name;
+	public int getMoney() {
+		return money;
 	}
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public int getWallet() {
-		return wallet;
-	}
-
-	public void setWallet(int wallet) {
-		this.wallet = wallet;
+	public void setMoney(int money) {
+		this.money = money;
 	}
 
 	public int getPoint() {

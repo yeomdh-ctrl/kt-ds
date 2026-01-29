@@ -1,13 +1,9 @@
 package com.ktdsuniversity.edu.inheritancework;
 
-public class Shop {
-	private String shopName;
+public abstract class Shop {
+	protected String shopName;
 	public Shop(String shopName) {
 		this.shopName = shopName;
 	}
-	public void sell(Customer customer,int productPrice, int payMoney) {
-		int change = payMoney - productPrice;
-		customer.setWallet(change + customer.getWallet()); 
-		System.out.println("거스름돈:" + change);
-	}
+	public abstract int sell(Customer customer, int price, int moneyReceive);
 }
