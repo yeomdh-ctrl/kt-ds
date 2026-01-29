@@ -1,15 +1,13 @@
 package com.ktdsuniversity.edu.inheritancework;
 
 public class Shop {
-	private String product;
-	private int price;
-	private int point;
-	private String grade;
-		public Shop(String product, int price) {
-		this.product = product;
-		this.price = price;
-		this.grade = grade;
-		this.point = point;
-		}
-	
+	private String shopName;
+	public Shop(String shopName) {
+		this.shopName = shopName;
+	}
+	public void sell(Customer customer,int productPrice, int payMoney) {
+		int change = payMoney - productPrice;
+		customer.setWallet(change + customer.getWallet()); 
+		System.out.println("거스름돈:" + change);
+	}
 }
