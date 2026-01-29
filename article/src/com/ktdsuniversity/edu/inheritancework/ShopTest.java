@@ -10,7 +10,10 @@ public class ShopTest {
 		Shop conv = new ConvenienceStore();
 		Customer c2 = new Customer(3000, 1000, " ");
 		conv.sell(c2, 2000, 1000);
-
+		
+		Shop dep = new DepartmentStore();
+		Customer c3 = new Customer(3000, 1000, "VIP");
+		dep.sell(c3, 2000, 2000);
 
 	}
 

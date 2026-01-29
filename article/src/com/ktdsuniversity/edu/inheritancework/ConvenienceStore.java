@@ -6,20 +6,25 @@ public class ConvenienceStore extends Shop{
 	}
 
 	@Override
-	public int sell(Customer customer, int price, int moneyReceive) {
+	public int sell(Customer customer, int price, int payMoney) {
 		
-		if(customer.getPoint() >= 100) {
-			customer.setPoint(0);
-		}
-		int pay = price + customer.getPoint();
-		if(price > moneyReceive + customer.getPoint()) {
-			System.out.println(shopName + " " + "돈이 부족합니다");
-			return moneyReceive;
-		}
-		int change = moneyReceive + customer.getPoint() - price;
-		customer.setMoney(customer.getMoney());
-		System.out.println(shopName +" " + "거스름돈: " + change);
+        if (customer.getPoint() >= 100) {
+            System.out.println("포인트 전액 사용: " + customer.getPoint());
+            price -= customer.getPoint();
+            customer.setPoint(0);
+        }
+
+        int change = payMoney - price;
+        customer.setMoney(customer.getMoney() - payMoney);
+
+        int savePoint = (int)(price * 0.001);
+        customer.setPoint(customer.getPoint() + savePoint);
+
+        System.out.println(shopName + " 구매 완료");
+        System.out.println("거스름돈: " + change);
+        System.out.println("적립 포인트: " + savePoint);
 		return 0;
-		
-	}
+    }
+
+
 }
