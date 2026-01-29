@@ -24,6 +24,6 @@ public class Guest {
 	}
 	@Override
 	public String toString() {
-		return "고객에게 남은돈:" + this.money;
+		return "고객에게 남은돈: " + this.money;
 	}
 }

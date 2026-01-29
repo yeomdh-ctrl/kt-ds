@@ -29,9 +29,13 @@ public abstract class AbstractMart {
 			return;
 		}
 		//손님이 마트에 돈을 지불한다
-		guest.pay(money - guestPoint);
+		guest.pay(money);
 		
 		this.givePoint(guest, amount);
+		
+		if(amount > guestPoint) {
+			this.remainMoney -= amount - guestPoint;
+		}
 		
 		this.remainMoney -= amount - guestPoint;
 		this.safe += money + guestPoint - this.remainMoney;
