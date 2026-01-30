@@ -51,84 +51,84 @@ public class SimpleCalculator {
 		result = sc.calc(10, 0, "+");
 		}
 		catch(NullOperatorExceptions noe) { // 연산자가 null 일 때의 처리
-			System.out.println(noe.getMessage());
+			System.out.println("연산자가 비어있습니다. 연산자를 채워서 다시 실행하세요");
 		}
 		catch(DivideZeroExceptions dze) { //숫자가 0 일 때의 처리
-			System.out.println(dze.getMessage());
+			System.out.println("0으로 나누려 했습니다. 숫자를 제대로 작성해서 다시 실행하세요");
 		}
 		catch(WrongOperatorException woe) { // 연산자를 잘못 작성했을 때의 처리
-			System.out.println(woe.getMessage());
+			System.out.println("지원하지 않는 연산자 입니다. +, -, *, / 중에 선택해서 다시 실행하세요");
 		}
 		System.out.println(result);
 		
 		try {
 			result = sc.calc(10, 0, "-");
 			}
-			catch(NullOperatorExceptions noe) { // 연산자가 null 일 때의 처리
-				System.out.println(noe.getMessage());
-			}
-			catch(DivideZeroExceptions dze) { //숫자가 0 일 때의 처리
-				System.out.println(dze.getMessage());
-			}
-			catch(WrongOperatorException woe) { // 연산자를 잘못 작성했을 때의 처리
-				System.out.println(woe.getMessage());
-			}
+		catch(NullOperatorExceptions noe) { // 연산자가 null 일 때의 처리
+			System.out.println("연산자가 비어있습니다. 연산자를 채워서 다시 실행하세요");
+		}
+		catch(DivideZeroExceptions dze) { //숫자가 0 일 때의 처리
+			System.out.println("0으로 나누려 했습니다. 숫자를 제대로 작성해서 다시 실행하세요");
+		}
+		catch(WrongOperatorException woe) { // 연산자를 잘못 작성했을 때의 처리
+			System.out.println("지원하지 않는 연산자 입니다. +, -, *, / 중에 선택해서 다시 실행하세요");
+		}
 		System.out.println(result);
 		
 		try {
 			result = sc.calc(10, 0, "*");
 			}
-			catch(NullOperatorExceptions noe) { // 연산자가 null 일 때의 처리
-				System.out.println(noe.getMessage());
-			}
-			catch(DivideZeroExceptions dze) { //숫자가 0 일 때의 처리
-				System.out.println(dze.getMessage());
-			}
-			catch(WrongOperatorException woe) { // 연산자를 잘못 작성했을 때의 처리
-				System.out.println(woe.getMessage());
-			}
+		catch(NullOperatorExceptions noe) { // 연산자가 null 일 때의 처리
+			System.out.println("연산자가 비어있습니다. 연산자를 채워서 다시 실행하세요");
+		}
+		catch(DivideZeroExceptions dze) { //숫자가 0 일 때의 처리
+			System.out.println("0으로 나누려 했습니다. 숫자를 제대로 작성해서 다시 실행하세요");
+		}
+		catch(WrongOperatorException woe) { // 연산자를 잘못 작성했을 때의 처리
+			System.out.println("지원하지 않는 연산자 입니다. +, -, *, / 중에 선택해서 다시 실행하세요");
+		}
 		System.out.println(result);
 		
 		try {
 			result = sc.calc(10, 0, "/");
 			}
-			catch(NullOperatorExceptions noe) { // 연산자가 null 일 때의 처리
-				System.out.println(noe.getMessage());
-			}
-			catch(DivideZeroExceptions dze) { //숫자가 0 일 때의 처리
-				System.out.println(dze.getMessage());
-			}
-			catch(WrongOperatorException woe) { // 연산자를 잘못 작성했을 때의 처리
-				System.out.println(woe.getMessage());
-			}
+		catch(NullOperatorExceptions noe) { // 연산자가 null 일 때의 처리
+			System.out.println("연산자가 비어있습니다. 연산자를 채워서 다시 실행하세요");
+		}
+		catch(DivideZeroExceptions dze) { //숫자가 0 일 때의 처리
+			System.out.println("0으로 나누려 했습니다. 숫자를 제대로 작성해서 다시 실행하세요");
+		}
+		catch(WrongOperatorException woe) { // 연산자를 잘못 작성했을 때의 처리
+			System.out.println("지원하지 않는 연산자 입니다. +, -, *, / 중에 선택해서 다시 실행하세요");
+		}
 		System.out.println(result);
 		
 		try {
 			result = sc.calc(10, 0, "%");
 			}
-			catch(NullOperatorExceptions noe) { // 연산자가 null 일 때의 처리
-				System.out.println(noe.getMessage());
-			}
-			catch(DivideZeroExceptions dze) { //숫자가 0 일 때의 처리
-				System.out.println(dze.getMessage());
-			}
-			catch(WrongOperatorException woe) { // 연산자를 잘못 작성했을 때의 처리
-				System.out.println(woe.getMessage());
-			}
+		catch(NullOperatorExceptions noe) { // 연산자가 null 일 때의 처리
+			System.out.println("연산자가 비어있습니다. 연산자를 채워서 다시 실행하세요");
+		}
+		catch(DivideZeroExceptions dze) { //숫자가 0 일 때의 처리
+			System.out.println("0으로 나누려 했습니다. 숫자를 제대로 작성해서 다시 실행하세요");
+		}
+		catch(WrongOperatorException woe) { // 연산자를 잘못 작성했을 때의 처리
+			System.out.println("지원하지 않는 연산자 입니다. +, -, *, / 중에 선택해서 다시 실행하세요");
+		}
 		System.out.println(result);
 		
 		try {
 			result = sc.calc(10, 0, null);
 			}
-			catch(NullOperatorExceptions noe) { // 연산자가 null 일 때의 처리
-				System.out.println(noe.getMessage());
-			}
-			catch(DivideZeroExceptions dze) { //숫자가 0 일 때의 처리
-				System.out.println(dze.getMessage());
-			}
-			catch(WrongOperatorException woe) { // 연산자를 잘못 작성했을 때의 처리
-				System.out.println(woe.getMessage());
-			}
+		catch(NullOperatorExceptions noe) { // 연산자가 null 일 때의 처리
+			System.out.println("연산자가 비어있습니다. 연산자를 채워서 다시 실행하세요");
+		}
+		catch(DivideZeroExceptions dze) { //숫자가 0 일 때의 처리
+			System.out.println("0으로 나누려 했습니다. 숫자를 제대로 작성해서 다시 실행하세요");
+		}
+		catch(WrongOperatorException woe) { // 연산자를 잘못 작성했을 때의 처리
+			System.out.println("지원하지 않는 연산자 입니다. +, -, *, / 중에 선택해서 다시 실행하세요");
+		}
 		System.out.println(result);
 	}
 }

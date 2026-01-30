@@ -4,20 +4,23 @@ public class RestaurantTest {
 
     public static void main(String[] args) {
 
-        // 식당 2개
+
         Restaurant res1 = new Restaurant("한식집");
         Restaurant res2 = new Restaurant("술집");
 
-        // 손님
+
         Customer c1 = new Customer("A");
 
-        // 메뉴 2종 (음식, 술)
-        Menu food = new Menu("비빔밥", 40, 0);
-        Menu drink = new Menu("소주", 0, 900);
+
+//        Menu food = new Menu("비빔밥", 40, 0);
+//        Menu drink = new Menu("소주", 0, 900);
+        
+        Menu food = new Menu("비빔밥", 4, 0);
+        Menu drink = new Menu("소주", 0, 90);
 
         System.out.println("한식집");
-        res1.order(c1, food);
-        res1.order(c1, food);
+//        res1.order(null,food);
+//        res1.order(c1, null);
         res1.order(c1, food);
         res1.order(c1, drink);
         res1.order(c1, drink);
