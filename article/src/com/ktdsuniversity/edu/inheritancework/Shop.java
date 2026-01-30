@@ -5,5 +5,5 @@ public abstract class Shop {
 	public Shop(String shopName) {
 		this.shopName = shopName;
 	}
-	public abstract int sell(Customer customer, int price, int moneyReceive);
+	public abstract int sell(Customer customer, int price, int payMoney);
 }
