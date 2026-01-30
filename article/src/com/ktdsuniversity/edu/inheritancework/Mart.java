@@ -11,6 +11,10 @@ public class Mart extends Shop{
 			System.out.println(shopName + " " + "돈이 부족합니다");
 			return payMoney;
 		}
+		if(payMoney > customer.getMoney()) {
+			System.out.println("가진 돈이 부족합니다");
+			return payMoney;
+		}
 		int change = payMoney - price;
 		customer.setMoney(customer.getMoney());
 		System.out.println(shopName +" " + "거스름돈: " + change);

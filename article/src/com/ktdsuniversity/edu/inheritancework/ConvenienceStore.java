@@ -13,6 +13,10 @@ public class ConvenienceStore extends Shop{
             price -= customer.getPoint();
             customer.setPoint(0);
         }
+        if(price > customer.getMoney() + customer.getPoint()) {
+        	System.out.println("포인트 + 돈이 부족합니다");
+        	return payMoney;
+        }
 
         int change = payMoney - price;
         customer.setMoney(customer.getMoney() - payMoney);

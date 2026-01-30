@@ -41,13 +41,11 @@ public class DepartmentStore extends Shop{
             System.out.println(shopName + "포인트로 결제 완료");
             System.out.println("거스름돈: 0");
         } else {
-
             if (payMoney < price) {
                 System.out.println("돈이 부족합니다");
-                return 0;
+                return payMoney;
             }
-
-            int change = payMoney - price;
+            int change = payMoney + customer.getPoint() - price;
             customer.setMoney(customer.getMoney() - payMoney);
 
             System.out.println(shopName + " 구매 완료");
