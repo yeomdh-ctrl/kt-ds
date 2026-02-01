@@ -1,6 +1,7 @@
 package com.ktdsuniversity.edu.inheritancework;
 
-public class DepartmentStore extends Shop{
+public class DepartmentStore extends Shop {
+
     public DepartmentStore() {
         super("백화점");
     }
@@ -9,6 +10,7 @@ public class DepartmentStore extends Shop{
     public int sell(Customer customer, int price, int payMoney) {
 
         int savePoint = 0;
+
 
         if (customer.getGrade().equals("VIP")) {
             price = (int)(price * 0.97);
@@ -20,6 +22,9 @@ public class DepartmentStore extends Shop{
         else {
             savePoint = (int)(price * 0.005);
         }
+
+        System.out.println("할인 후 가격: " + price);
+
 
         if (customer.getPoint() >= 10000) {
 
@@ -37,24 +42,29 @@ public class DepartmentStore extends Shop{
             System.out.println("사용 포인트: " + usePoint);
         }
 
+
         if (price == 0) {       
-            System.out.println(shopName + "포인트로 결제 완료");
+            System.out.println(shopName + " 포인트로 결제 완료");
             System.out.println("거스름돈: 0");
-        } else {
+        } 
+        else {
             if (payMoney < price) {
                 System.out.println("돈이 부족합니다");
                 return payMoney;
             }
-            int change = payMoney + customer.getPoint() - price;
+
+            int change = payMoney - price;
             customer.setMoney(customer.getMoney() - payMoney);
 
             System.out.println(shopName + " 구매 완료");
             System.out.println("거스름돈: " + change);
         }
 
+
         customer.setPoint(customer.getPoint() + savePoint);
         System.out.println("적립 포인트: " + savePoint);
+
         return 0;
     }
-
 }
+
