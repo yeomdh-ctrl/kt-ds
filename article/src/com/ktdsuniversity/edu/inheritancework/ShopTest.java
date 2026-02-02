@@ -14,8 +14,8 @@ public class ShopTest {
 		conv.sell(c2, 3000, 2000);
 		
 		Shop dep = new DepartmentStore();
-		Customer c3 = new Customer(3000, 1000, "VIP");
-		dep.sell(c3, 2000, 2000);
+		Customer c3 = new Customer(3000, 10000, "VVIP");
+		dep.sell(c3, 2000, 0);
 
 	}
 
