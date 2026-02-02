@@ -13,11 +13,11 @@ public class ScoreListTest {
 		list.add(234543); //4
 		list.add(234543); //5
 		
-		int sum = 0;
-		for(int i = 0; i < 6; i++) {
-			sum += list.get(i);
-		}
-		System.out.println(sum);
+//		int sum = 0;
+//		for(int i = 0; i < 6; i++) {
+//			sum += list.get(i);
+//		}
+//		System.out.println(sum);
 		
 		Reducer<Integer, Integer> listReducer = new Reducer<>() {
 			@Override
@@ -26,7 +26,7 @@ public class ScoreListTest {
 				return input + output;
 			}};
 			
-		//	int sum = list.sum(listReducer, 0);
+			int sum = list.sum(listReducer, 0);
 			System.out.println(sum);
 			
 		int value = list.get(2);

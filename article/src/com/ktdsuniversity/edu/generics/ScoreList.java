@@ -8,6 +8,7 @@ public class ScoreList<T, SUM_RESULT>{// 괄호안에 아무거나 써도됨
 	
 	// 배열에 몇 개의 데이터가 있는지 확인
 	private int size;
+	
 	public ScoreList(){
 		// T[] scoreArray 초기화: 인덱스가 2개인.
 		this.scoreArray = new Object[2];
