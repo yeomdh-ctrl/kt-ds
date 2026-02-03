@@ -32,37 +32,36 @@ import java.util.Scanner;
 비행기 편의 이름을 입력하세요:  0004
  */
 public class Airplane {
-	
 public static void main(String[] args) {
         
         Scanner scanner = new Scanner(System.in);
         
-        Map<String, List<String>> flightMap = new HashMap<>();
+        Map<String, List<String>> flights = new HashMap<>();
 
         List<String> seats2 = new ArrayList<>();
         for (int i = 0; i < 9; i++) {
             seats2.add("O"); 
         }
         seats2.set(4, "X"); 
-        flightMap.put("0002", seats2);
+        flights.put("0002", seats2);
 
         List<String> seats3 = new ArrayList<>();
         for (int i = 0; i < 9; i++) {
             seats3.add("X");
         }
-        flightMap.put("0003", seats3);
+        flights.put("0003", seats3);
 
         while (true) {
             System.out.println("비행기 편의 이름을 입력하면, 좌석 현황을 볼 수 있습니다.");
             System.out.print("비행기 편의 이름을 입력하세요: ");
             String flightName = scanner.next();
 
-            if (!flightMap.containsKey(flightName)) {
+            if (!flights.containsKey(flightName)) {
                 System.out.println( flightName + "편은 존재하지 않습니다.");
                 continue;
             }
             
-            List<String> currentSeats = flightMap.get(flightName);
+            List<String> currentSeats = flights.get(flightName);
             
             boolean hasAvailableSeat = false;
             for (String status : currentSeats) {
@@ -74,7 +73,6 @@ public static void main(String[] args) {
 
             System.out.println(flightName + "편의 좌석 현황입니다. (O: 예약 가능, X: 예약 불가능)");
             for (int i = 0; i < currentSeats.size(); i++) {
-                
                 System.out.print((i + 1) + ": " + currentSeats.get(i));
                 if (i < currentSeats.size() - 1) {
                     System.out.print(", ");
