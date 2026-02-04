@@ -71,7 +71,7 @@ public class CoffeeShop {
 				int stock = this.hot.getStock();
 				stock -= quantity;
 				this.hot.setStock(stock);
-				System.out.println(this.hot.getMenu() + "음료를" + quantity + "개 주문 받았습니다." + this.hot.getStock());			
+				System.out.println(this.hot.getMenu() + "음료를" + quantity + "개 주문 받았습니다." + "남은 재고 수: " + this.hot.getStock());			
 				return this.hot.getPrice() * quantity;	
 			}
 			else {
@@ -83,7 +83,7 @@ public class CoffeeShop {
 				int stock = this.ice.getStock();
 				stock -= quantity;
 				this.ice.setStock(stock);
-				System.out.println(this.ice.getMenu() + "음료를" + quantity + "개 주문 받았습니다." + this.ice.getStock());
+				System.out.println(this.ice.getMenu() + "음료를" + quantity + "개 주문 받았습니다." + "남은 재고 수: " + this.ice.getStock());
 				return this.ice.getPrice() * quantity;
 			}
 			else {

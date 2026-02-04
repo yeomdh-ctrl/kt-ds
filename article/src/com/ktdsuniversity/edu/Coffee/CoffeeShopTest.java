@@ -24,11 +24,11 @@ public class CoffeeShopTest {
 //		System.out.println(price);
 		
 //		hot 을 한개 주문하겠다
-//		int price = starbucks.orderCoffee();
-//		System.out.println(price);
+		price = starbucks.orderCoffee(Menu.HOT);
+		System.out.println(price);
 //		ice 를 한개 주문하겠다
-//		price = starbucks.orderCoffee(2);
-//		System.out.println(price);
+		price = starbucks.orderCoffee(Menu.ICE);
+		System.out.println(price);
 	}
 
 }
