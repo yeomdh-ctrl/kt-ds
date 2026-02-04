@@ -82,10 +82,9 @@ public class LocalSeriesExam {
 		System.out.println(period.getYears());
 		System.out.println(period.getMonths());
 		System.out.println(period.getDays());
-		
+		//얼마나 차이나냐
 		long betweenDays = ChronoUnit.DAYS.between(date3, date4);
-		System.out.println(betweenDays);
-		
+		System.out.println(betweenDays);		
 		long bewWeenYears = ChronoUnit.YEARS.between(date3, date4);
 		System.out.println(bewWeenYears);
 	}
