@@ -6,7 +6,7 @@ public class Coffee {
 	/**
 	 * 커피 메뉴의 이름
 	 */
-	private String name;
+	private Menu menu;
 	/**
 	 * 커피 메뉴의 가격
 	 */
@@ -16,8 +16,8 @@ public class Coffee {
 	 */
 	private int stock;
 	
-	public Coffee(String name, int price, int stock) {
-		this.name = name;
+	public Coffee(Menu menu, int price, int stock) {
+		this.menu = menu;
 		this.price = price;
 		this.stock = stock;
 	}
@@ -30,8 +30,8 @@ public class Coffee {
 	// getter : Coffee 클래스 외부로 멤버 변수의 값을 노출시키는 코드
 	// setter : 외부에서 Coffee 클래스 내부로 멤버 변수의 값을 변경시키는 코드
 	
-	public String getName() {
-		return this.name;
+	public Menu getMenu() {
+		return this.menu;
 	}
 	public int getPrice() {
 		return this.price;
@@ -39,8 +39,8 @@ public class Coffee {
 	public int getStock() {
 		return this.stock;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setMenu(Menu menu) {
+		this.menu = menu;
 	}
 	public void setPrice(int price) {
 		this.price = price;

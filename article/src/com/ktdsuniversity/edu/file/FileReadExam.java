@@ -98,7 +98,7 @@ public class FileReadExam {
 			FileReader fileReader = null;
 			BufferedReader bufferedReader = null;
 			try {
-				//4-1. 파일의 byte 를 Chunking 해서 가져온다
+				//4-1. 파일의 byte 를 Chucking 해서 가져온다
 				fileReader = new FileReader(target); //내가 읽으려는 파일이 존재하지 않을 때 예외 발생
 				//4-2. 파일의 내용을 String 으로 변환한다
 				bufferedReader = new BufferedReader(fileReader);
