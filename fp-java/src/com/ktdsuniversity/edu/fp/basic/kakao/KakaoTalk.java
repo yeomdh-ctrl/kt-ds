@@ -21,7 +21,7 @@ public class KakaoTalk {
 		System.out.println("7일 이내에 생일을 맞이하는 친구 목록");
 //		fl.printSpecialFriends(birthdate -> birthdate.isAfter(LocalDate.now()) 
 //										&& birthdate.isBefore(LocalDate.now().plusDays(8)));
-		fl.printSpecialFriends(friend -> {
+		fl.printSpecialFriends2(friend -> {
 			LocalDate birthdate = friend.getBirthdate().withYear(LocalDate.now().getYear());
 			return birthdate.isAfter(LocalDate.now()) 
 					&& birthdate.isBefore(LocalDate.now().plusDays(8));
@@ -30,7 +30,7 @@ public class KakaoTalk {
 		
 		System.out.println("오늘이 생일인 친구 목록");
 //		fl.printSpecialFriends(birthdate -> birthdate.isEqual(LocalDate.now()));
-		fl.printSpecialFriends(friend -> {
+		fl.printSpecialFriends2(friend -> {
 			LocalDate now = LocalDate.now();
 			LocalDate birthdate = friend.getBirthdate().withYear(now.getYear());
 			return birthdate.isEqual(now);
@@ -40,7 +40,7 @@ public class KakaoTalk {
 		System.out.println("7일 이내에 생일이 지난 친구 목록");
 ////		fl.printSpecialFriends(birthdate -> birthdate.isBefore(LocalDate.now()) 
 //										&& birthdate.isAfter(LocalDate.now().minusDays(8)));
-		fl.printSpecialFriends(friend -> {
+		fl.printSpecialFriends2(friend -> {
 			LocalDate birthdate = friend.getBirthdate().withYear(LocalDate.now().getYear());
 			return birthdate.isBefore(LocalDate.now()) 
 					&& birthdate.isAfter(LocalDate.now().minusDays(8));
@@ -48,21 +48,21 @@ public class KakaoTalk {
 		
 		
 		System.out.println("오늘 만 30세가 된 친구 목록");
-		fl.printSpecialFriends(friend -> {
+		fl.printSpecialFriends2(friend -> {
 			Period period = Period.between(friend.getBirthdate(), LocalDate.now());
 			return period.getYears() == 30 && period.getMonths() == 0 && period.getDays() == 0;
 		});
 		
 		System.out.println("이름이 A인 친구 목록");
-		fl.printSpecialFriends(friend -> friend.getName().equals("A"));
+		fl.printSpecialFriends2(friend -> friend.getName().equals("A"));
 		
 		System.out.println("이름이 '김'으로 시작하는 친구 목록");
-		fl.printSpecialFriends(friend -> friend.getName().startsWith("김"));
+		fl.printSpecialFriends2(friend -> friend.getName().startsWith("김"));
 		
 		
 		System.out.println("전체 친구 목록");
 //		System.out.println(fl);
-		fl.printSpecialFriends(friend -> true);
+		fl.printSpecialFriends2(friend -> true);
 
 	}
 

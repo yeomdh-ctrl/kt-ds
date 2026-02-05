@@ -6,14 +6,14 @@ public class Test {
 		Calculator calc = new Calculator();
 		
 		// num1, num2 를 더해 반환한다
-		int result = calc.calc(1, 2, (num1,num2) -> num1 + num2);
+		int result = calc.calc2(1, 2, (num1,num2) -> num1 + num2);
 		System.out.println(result);
 		
 		// num1, num2 를 제곱한 수를 반환
-		result = calc.calc(2, 4, (num1, num2) ->(int) Math.pow(num1, num2));
+		result = calc.calc2(2, 4, (num1, num2) ->(int) Math.pow(num1, num2));
 		System.out.println(result);
 		// Method Reference -> Math 의 원형을 가져오는데 형태는 같아야함
-		result = calc.calc(2, 4, Math::powExact);
+		result = calc.calc2(2, 4, Math::powExact);
 		
 		// num1, num2 중 큰 수를 반환
 		result = calc.calc(3, 6, (num1, num2) -> Math.max(num1, num2));
