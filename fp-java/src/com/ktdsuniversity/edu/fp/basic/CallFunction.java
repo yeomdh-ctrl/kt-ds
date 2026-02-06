@@ -42,6 +42,7 @@ public class CallFunction {
 			}
 		});
 		
+		
 		//메소드만 전달(람다 - 2.함수를 인자로 전달)
 		cf.callInterface((String message) ->System.out.println(message + "입니다."));
 		cf.callInterface((message) ->System.out.println(message + "입니다."));
