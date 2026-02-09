@@ -33,5 +33,9 @@ public class Company {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	@Override
+	public String toString() {
+		return "회사명: "+ this.companyName +"\n회사주소: "+ this.address +"\n직급: "+ this.job;
+	}
 
 }

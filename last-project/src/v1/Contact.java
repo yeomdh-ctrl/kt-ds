@@ -86,5 +86,9 @@ public class Contact {
 	public void setPhones(List<Phone> phones) {
 		this.phones = phones;
 	}
+	@Override
+	public String toString() {
+		return "이름: " + this.name + "\n별명: " + this.nickname + "\n이메일: " + this.email + "\n메모: " + this.memo;
+	}
 
 }
