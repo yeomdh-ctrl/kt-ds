@@ -106,7 +106,6 @@ public class ContactManager {
 				type = Phone.Type.COMPANY;
 			}
 			contact.getPhones().add(new Phone(type, number));
-			break;
 		}
 		contactList.add(contact);
 	}
