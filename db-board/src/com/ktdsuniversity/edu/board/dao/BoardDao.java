@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.ktdsuniversity.edu.board.dao.query.BoardQuery;
 import com.ktdsuniversity.edu.board.db.helper.DataAccessHelper;
@@ -11,105 +13,87 @@ import com.ktdsuniversity.edu.board.db.helper.SQLType;
 import com.ktdsuniversity.edu.board.vo.BoardVO;
 
 /**
- * Dao: Data Access Object
- * - Java에서 DB로 데이터 생성, 수정, 삭제, 조회를 하기위한 클래스
+ * Dao: Data Access Object - Java에서 DB로 데이터 생성, 수정, 삭제, 조회를 하기위한 클래스
  */
 public class BoardDao {
-	
+
+	private DataAccessHelper dah;
+
+	public BoardDao(DataAccessHelper dah) {
+		this.dah = dah;
+	}
+
 	public void deleteArticle(String articleID) {
-		DataAccessHelper dah = new DataAccessHelper("localhost", 1521, "XE", "BOARD", "BOARD");
-		try {
-			dah.preparedStatement(BoardQuery.makeDeleteQuery(), (pstmt) -> {
-				pstmt.setString(1, articleID);
-			});
-			dah.executeQuery(SQLType.DELETE, null);
-			dah.commit();
-		} 
-		catch (RuntimeException re) {
-			dah.rollback();
-			System.out.println(re.getMessage());
-		}
-		finally {
-			dah.close();
-		}
+		this.dah.preparedStatement(BoardQuery.makeDeleteQuery(), (pstmt) -> {
+			pstmt.setString(1, articleID);
+		});
+		this.dah.executeQuery(SQLType.DELETE, null);
 	}
-	
-	public void modifyArticle(BoardVO modifyArticle) {		
-		DataAccessHelper dah = new DataAccessHelper("localhost", 1521, "XE", "BOARD", "BOARD");
-		try {
-			dah.preparedStatement(BoardQuery.makeUpdateQuery(), (pstmt) -> {
-				pstmt.setString(1, modifyArticle.getTitle());
-				pstmt.setString(2, modifyArticle.getContent());
-				pstmt.setString(3, modifyArticle.getId());
-			});
-			dah.executeQuery(SQLType.UPDATE, null);
-			dah.commit();
-		} 
-		catch (RuntimeException re) {
-			dah.rollback();
-			System.out.println(re.getMessage());
-		}
-		finally {
-			dah.close();
-		}
+
+	public void modifyArticle(BoardVO modifyArticle) {
+		this.dah.preparedStatement(BoardQuery.makeUpdateQuery(), (pstmt) -> {
+			pstmt.setString(1, modifyArticle.getTitle());
+			pstmt.setString(2, modifyArticle.getContent());
+			pstmt.setString(3, modifyArticle.getId());
+		});
+		this.dah.executeQuery(SQLType.UPDATE, null);
+
 	}
-	
+
 	public void createNewArticle2(BoardVO newArticle) {
-		
-		DataAccessHelper dah = new DataAccessHelper("localhost", 1521, "XE", "BOARD", "BOARD");
-		try {
-			dah.preparedStatement(BoardQuery.makeInsertQuery(), (pstmt) -> {
-				pstmt.setString(1, newArticle.getTitle());
-				pstmt.setString(2, newArticle.getContent());
-			});
-			dah.executeQuery(SQLType.INSERT, null);
-			dah.commit();
-		} 
-		catch (RuntimeException re) {
-			dah.rollback();
-			System.out.println(re.getMessage());
-		}
-		finally {
-			dah.close();
-		}
+		this.dah.preparedStatement(BoardQuery.makeInsertQuery(), (pstmt) -> {
+			pstmt.setString(1, newArticle.getTitle());
+			pstmt.setString(2, newArticle.getContent());
+		});
+		this.dah.executeQuery(SQLType.INSERT, null);
+
 	}
-	public BoardVO readArticle(String articleId) {
+
+	public void updateViewCount(String articleId) {
 		// UPDATE => 조회수를 1증가
-		DataAccessHelper dah = new DataAccessHelper("localhost", 1521, "XE", "BOARD", "BOARD");
-		try {
-			dah.preparedStatement(BoardQuery.makeUpdateViewCountQuery(), (pstmt) -> {
-				pstmt.setString(1, articleId);
-			});
-			dah.executeQuery(SQLType.UPDATE, null);
-			
+		this.dah.preparedStatement(BoardQuery.makeUpdateViewCountQuery(), (pstmt) -> {
+			pstmt.setString(1, articleId);
+		});
+		this.dah.executeQuery(SQLType.UPDATE, null);
+	}
+
+	public BoardVO readArticle(String articleId) {
+
 		// SELECT => 게시글의 내용을 조회
-			BoardVO result = new BoardVO();
-			dah.preparedStatement(BoardQuery.makeSelectOneQuery(), (pstmt) -> {
-				pstmt.setString(1, articleId);
-			});
-			dah.executeQuery(SQLType.SELECT, rs -> {
-				result.setId(rs.getString("ID"));
-				result.setTitle(rs.getString("TITLE"));
-				result.setContent(rs.getString("CONTENT"));
-				result.setViewCount(rs.getInt("VIEW_COUNT"));
-				result.setWriteDate(rs.getString("WRITE_DATE"));
-				result.setLatestModifyDate(rs.getString("LATEST_MODIFY_DATE"));
-			});
-			dah.commit();
-			return result;
-		} 
-		catch (RuntimeException re) {
-			dah.rollback();
-			System.out.println(re.getMessage());
-		}
-		finally {
-			dah.close();
-		}
-		return null;
+		BoardVO result = new BoardVO();
+		this.dah.preparedStatement(BoardQuery.makeSelectOneQuery(), (pstmt) -> {
+			pstmt.setString(1, articleId);
+		});
+		this.dah.executeQuery(SQLType.SELECT, rs -> {
+			result.setId(rs.getString("ID"));
+			result.setTitle(rs.getString("TITLE"));
+			result.setContent(rs.getString("CONTENT"));
+			result.setViewCount(rs.getInt("VIEW_COUNT"));
+			result.setWriteDate(rs.getString("WRITE_DATE"));
+			result.setLatestModifyDate(rs.getString("LATEST_MODIFY_DATE"));
+		});
+		return result;
+	}
+
+	public List<BoardVO> readAllArticle() {
+		// SELECT => 게시글의 내용을 조회
+		List<BoardVO> result = new ArrayList<>();
+		this.dah.preparedStatement(BoardQuery.makeSelectAllQuery(), null);
+		this.dah.executeQuery(SQLType.SELECT, rs -> {
+			BoardVO eachArticle = new BoardVO();
+			eachArticle.setId(rs.getString("ID"));
+			eachArticle.setTitle(rs.getString("TITLE"));
+			eachArticle.setContent(rs.getString("CONTENT"));
+			eachArticle.setViewCount(rs.getInt("VIEW_COUNT"));
+			eachArticle.setWriteDate(rs.getString("WRITE_DATE"));
+			eachArticle.setLatestModifyDate(rs.getString("LATEST_MODIFY_DATE"));
+			result.add(eachArticle);
+		});
+		return result;
 	}
 
 	public int createNewArticle(BoardVO newArticle) {
-		
+
 		// 1. ojdbc11.jar 파일이 프로젝트에 존재하는지 확인
 		try {
 			// oracle.jdbc.driver.OracleDriver 클래스를 불러온다
@@ -119,11 +103,11 @@ public class BoardDao {
 			System.out.println("오라클 데이터베이스에 접속하기 위한 라이브러리가 없습니다.");
 			return 0;
 		}
-		
+
 		// 2. OracleDB에 접속
 		Connection connection = null;
 		try {
-			connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","BOARD", "BOARD");
+			connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "BOARD", "BOARD");
 			// MANUAL COMMIT으로 변경
 			connection.setAutoCommit(false);
 		} catch (SQLException e) {
@@ -131,7 +115,7 @@ public class BoardDao {
 			System.out.println("사유: " + e.getMessage());
 			return 0;
 		}
-		
+
 		// 3. INSERT Query 작성
 		StringBuffer query = new StringBuffer();
 		query.append(" INSERT INTO BOARD.BOARD                                                        ");
@@ -144,7 +128,7 @@ public class BoardDao {
 		query.append(" , ?                                                                           ");
 		query.append(" , ?                                                                           ");
 		query.append(" , SYSDATE)                                                                     ");
-		
+
 		// 3-1. ?에 데이터 할당하기
 		PreparedStatement pstmt = null;
 		try {
@@ -153,15 +137,17 @@ public class BoardDao {
 			pstmt.setString(2, newArticle.getContent());
 		} catch (SQLException e) {
 			// pstmt의 파이프가 만들어져 있는 상태에서 예외가 발생했다면 닫는다
-			if(pstmt != null) {
+			if (pstmt != null) {
 				try {
 					pstmt.close();
-				} catch (SQLException e1) {}
+				} catch (SQLException e1) {
+				}
 			}
 			// 연결된 Connection을 닫는다(파이프 끊기)
 			try {
 				connection.close();
-			} catch (SQLException e1) {}
+			} catch (SQLException e1) {
+			}
 			// 데이터베이스와 연결이 끊어져 있거나, 작성된 쿼리의 내용이 잘못되었을 때 에러가 발생
 			System.out.println("쿼리 내용의 문제가 있습니다");
 			System.out.println("사유: " + e.getMessage());
@@ -176,8 +162,9 @@ public class BoardDao {
 		} catch (SQLException e) {
 			try {
 				connection.rollback();
-			} catch (SQLException e1) {}
-			// Insert 쿼리에 파라미터 할당이 잘못 되었을 때(예> ?는 2개인데, 할당한 데이터는 1개일때), 
+			} catch (SQLException e1) {
+			}
+			// Insert 쿼리에 파라미터 할당이 잘못 되었을 때(예> ?는 2개인데, 할당한 데이터는 1개일때),
 			// PK가 중복되었을 때,
 			// 컬럼의 타입과 Insert 하는 값이 다를 때,
 			// 컬럼이 허용하는 최대 길이보다 값의 길이가 더 클때 에러가 발생
@@ -189,12 +176,13 @@ public class BoardDao {
 		finally {
 			try {
 				pstmt.close();
-			} catch (SQLException e) {}
+			} catch (SQLException e) {
+			}
 			try {
 				connection.close();
-			} catch (SQLException e) {}
+			} catch (SQLException e) {
+			}
 		}
 	}
 
-	
 }
