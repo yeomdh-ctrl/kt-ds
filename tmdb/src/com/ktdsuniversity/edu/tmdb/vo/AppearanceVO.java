@@ -77,7 +77,10 @@ public class AppearanceVO {
 	}
 
 	@Override
-    public String toString() {
-        return "AppearanceVO(appearanceId: " + appearanceId + ", actorId: " + actorId + ", movieId: " + movieId + ", character: " + character + ", )";
-    }
+	public String toString() {
+		return "AppearanceVO [appearanceId=" + appearanceId + ", actorId=" + actorId + ", movieId=" + movieId
+				+ ", character=" + character + ", actor=" + this.actor + "]";
+	}
+
+	
 }

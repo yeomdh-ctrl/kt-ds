@@ -18,7 +18,7 @@ public class MovieQuery {
 	query.append("     , \"LANGUAGE\"                                     ");
 	query.append("     , BUDGET                                         ");
 	query.append("     , PROFIT                                         ");
-	query.append("  FROM MOVIE;                                         ");
+	query.append("  FROM MOVIE                                         ");
 	query.append(" WHERE MOVIE_ID = ?                ");
 	
 	return query.toString();

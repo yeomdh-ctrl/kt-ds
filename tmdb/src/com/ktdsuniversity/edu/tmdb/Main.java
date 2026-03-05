@@ -9,7 +9,7 @@ public class Main {
 		DataAccessHelper dah = new DataAccessHelper("localhost", 1521, "XE", "TMDB", "TMDB");
 		
 		MovieService movieService = new MovieService(dah);
-		MovieVO movie =  movieService.readMovie("MV-20260227_000001");
+		MovieVO movie =  movieService.readMovie("MV-20260227-000001");
 		
 		System.out.println("영화정보: " + movie);
 		System.out.println("장르정보: " + movie.getCategory());

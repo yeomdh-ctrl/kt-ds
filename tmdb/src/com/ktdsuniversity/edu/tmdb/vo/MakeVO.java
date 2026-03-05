@@ -92,7 +92,10 @@ public class MakeVO {
 	}
 
 	@Override
-    public String toString() {
-        return "MakeVO(makeId: " + makeId + ", producerId: " + producerId + ", movieId: " + movieId + ", role: " + role + ", part: " + part + ", )";
-    }
+	public String toString() {
+		return "MakeVO [makeId=" + makeId + ", producerId=" + producerId + ", movieId=" + movieId + ", role=" + role
+				+ ", part=" + part + ", producer=" + this.producer + "]";
+	}
+
+	
 }
