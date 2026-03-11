@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>mdn</title>
+    <link
+      rel="shortcut icon"
+      href="https://developer.mozilla.org//favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" type="text/css" href="./work2.css" />
+  </head>
+  <body>
+    <div class="fixed-header">
+      <div class="main-top-navigator">
+        <ul class="horizontal-list">
+          <li class="horizontal-item no-padding">
+            <img class="main-top-logo" src="mdn.png" />
+          </li>
+          <li class="horizontal-item">HTML</li>
+          <li class="horizontal-item">CSS</li>
+          <li class="horizontal-item">JavaScript</li>
+          <li class="horizontal-item">Web APIs</li>
+          <li class="horizontal-item">All</li>
+          <li class="horizontal-item">
+            <img class="item-logo" src="graduation.png" />Learn
+          </li>
+          <li class="horizontal-item">
+            <img class="item-logo" src="wrench.png" />Tools
+          </li>
+          <li class="horizontal-item">About</li>
+          <li class="horizontal-item">Blog</li>
+        </ul>
+      </div>
+      <div class="skills">
+        <ul class="horizontal-list">
+          <li class="horizontal-item">Web Technologies for Developers</li>
+          <li class="horizontal-item">></li>
+          <li class="horizontal-item">HTML: Hypertext Markup Language</li>
+          <li class="horizontal-item">></li>
+          <li class="horizontal-item">HTML Reference</li>
+          <li class="horizontal-item">></li>
+          <li class="horizontal-item">HTML Element Reference</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+-----------------------------------
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #f5f6f7;
+  color: #333;
+}
+.horizontal-list {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+}
+.horizontal-item {
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: middle;
+  padding: 20px 15px;
+}
+.no-padding {
+  padding: 0;
+}
+img {
+  vertical-align: bottom;
+}
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 999999;
+}
+.main-top-navigator {
+  position: relative;
+}
+.main-top-logo {
+  width: 90px;
+}
+.fixed-header
+  > .main-top-navigator
+  > .horizontal-list
+  > .horizontal-item
+  > .item-logo {
+  width: 20px;
+}
+.fixed-header
+  > .main-top-navigator
+  > .horizontal-list
+  > .horizontal-item:not(.no-padding) {
+  text-align: center;
+}
+.skills {
+  background-color: #eee;
+  color: #333;
+  height: 30px;
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+}
+.fixed-header > .skills > .horizontal-list > .horizontal-item {
+  padding: 0 5px;
+}
