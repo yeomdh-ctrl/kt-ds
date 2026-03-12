@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #f5f6f7;
+  color: #333;
+}
+.vertical-list > li {
+  font-size: 16px;
+  padding: 5px 0;
+}
+.horizontal-list,
+.vertical-list {
+  margin: 0;
+  padding: 0;
+  font-size: 0;
+  list-style-type: none;
+}
+.horizontal-list {
+  white-space: nowrap;
+}
+.horizontal-item {
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: middle;
+  padding: 20px 15px;
+}
+.no-padding {
+  padding: 0;
+}
+img {
+  vertical-align: bottom;
+}
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 999999;
+  overflow: hidden;
+}
+.main-top-navigator {
+  display: inline-block;
+  font-size: 16px;
+  padding-left: 23%;
+}
+.main-top-logo {
+  width: 90px;
+  position: absolute;
+  left: 30px;
+  top: 17px;
+}
+.search-icon {
+  width: 70px;
+  border: 1px solid #bbb;
+  border-radius: 25px;
+}
+.fixed-header
+  > .main-top-navigator
+  > .horizontal-list
+  > .horizontal-item
+  > .item-logo {
+  width: 20px;
+}
+.skills {
+  background-color: #eee;
+  color: #333;
+  height: 30px;
+  border-top: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+}
+.fixed-header > .skills > .horizontal-list > .horizontal-item {
+  padding: 0 5px;
+}
+
+/*메인 컨텐츠*/
+.contents {
+  padding-top: 80px;
+}
+.fixed-side-area {
+  position: fixed;
+  background-color: #fff;
+  width: 240px;
+  overflow: scroll;
+  height: 100%;
+}
+.fixed-side-area > li {
+  margin: 20px 0 8px 0;
+  font-size: 22px;
+  font-weight: 600;
+  padding-left: 10px;
+}
+.fixed-side-area > .vertical-list > li {
+  padding-left: 10px;
+  padding-right: 30px;
+}
+.bold {
+  font-weight: 700;
+}
+.filter {
+  border: 1px solid #bbb;
+  border-radius: 20px;
+  margin: 10px 20px 20px 20px;
+}

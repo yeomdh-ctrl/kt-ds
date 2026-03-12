@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./12_table.css" />
+    <title>Table</title>
+  </head>
+  <body>
+    <table class="grid">
+      <!--칸들의 크기를 관리하는 것의 묶음-->
+      <colgroup>
+        <col width="100px" />
+        <col width="" />
+        <col width="100px" />
+        <col width="160px" />
+        <col width="160px" />
+      </colgroup>
+      <thead>
+        <!--table row-->
+        <tr>
+          <!--header에 대응하는 table cell-->
+          <th>ID</th>
+          <th>과제 명</th>
+          <th>제출 마감일</th>
+          <th>등록일</th>
+          <th>수정일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!--body에 대응하는 table cell-->
+          <td>47</td>
+          <td>MDN Clone</td>
+          <td>2026-03-16</td>
+          <td>2026-03-11 17:00:00</td>
+          <td>2026-03-11 17:00:00</td>
+        </tr>
+        <tr>
+          <td>47</td>
+          <td>MDN Clone</td>
+          <td>2026-03-16</td>
+          <td>2026-03-11 17:00:00</td>
+          <td>2026-03-11 17:00:00</td>
+        </tr>
+        <tr>
+          <td>47</td>
+          <td>MDN Clone</td>
+          <td>2026-03-16</td>
+          <td>2026-03-11 17:00:00</td>
+          <td>2026-03-11 17:00:00</td>
+        </tr>
+        <tr>
+          <td>47</td>
+          <td>MDN Clone</td>
+          <td>2026-03-16</td>
+          <td>2026-03-11 17:00:00</td>
+          <td>2026-03-11 17:00:00</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="grid">
+      <thead>
+        <tr>
+          <!--위, 아래 병합하기(숫자는 몇번째 행까지 병합 할 것인지)-->
+          <th rowspan="2">수강생</th>
+          <!--옆으로 병합하기-->
+          <th colspan="2">확정</th>
+        </tr>
+        <tr>
+          <th>회사명</th>
+          <th>입사일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>김</td>
+          <td>언제</td>
+          <td>어디</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

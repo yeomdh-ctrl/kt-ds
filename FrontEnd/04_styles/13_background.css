@@ -1,0 +1,33 @@
+.mail {
+  width: 70px;
+  height: 70px;
+  background-image: 
+  /*이메일 아이콘*/
+    url("./naver_sprite.png"),
+    /*뒷배경 아이콘*/ url("./naver_sprite.png");
+  background-repeat: no-repeat;
+  background-size:
+    786px 780px,
+    786px 780px;
+  background-position:
+    -350px -373px,
+    -269px -247px;
+}
+.input-form {
+  padding: 10px;
+}
+
+.input-form > div > input {
+  padding: 10px;
+  margin-right: 5px;
+}
+.background {
+  width: 1000px;
+  height: 800px;
+  border: 1px solid #000;
+  background-image: url("./naver_sprite.png");
+  background-repeat: no-repeat;
+  background-size: 786px 780px;
+  /*좌표값. 왼쪽부터 ?px, 위에서 ?px 떨어진 곳 부터 그려라(음수도 가능)*/
+  background-position: 0px 0px;
+}
