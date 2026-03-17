@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .grid-layout {
   width: 500px;
   height: 500px;
@@ -25,3 +26,32 @@
   grid-row: 2 / 4;
   background-color: chartreuse;
 }
+=======
+.grid-layout {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  gap: 10px;
+  grid-template-rows: 150px 1fr 200px;
+  grid-template-columns: minmax(50px, auto) 1fr minmax(80px, auto);
+}
+.top-header {
+  /*가로로 병합하기*/
+  /* grid-column-start: 1;
+     grid-column-end: 4; */
+  /*위의 코드를 아래로 대체 가능*/
+  grid-column: 1 / 4;
+
+  background-color: aquamarine;
+}
+.footer {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-color: blueviolet;
+}
+.aside {
+  /*세로로 병합하기*/
+  grid-row: 2 / 4;
+  background-color: chartreuse;
+}
+>>>>>>> ea1342efd5ea3dfb2f98354de2a011280fe6400c

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .full,
 .half,
 .quarter {
@@ -22,3 +23,29 @@
   padding: 10px;
   margin: 10px;
 }
+=======
+.full,
+.half,
+.quarter {
+  border: 2px solid #000;
+}
+.full {
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  padding: 10px;
+  margin: 10px;
+}
+.half {
+  width: 50%;
+  background-color: #0f0;
+  padding: 10px;
+  margin: 10px;
+}
+.quarter {
+  width: 25%;
+  background-color: blue;
+  padding: 10px;
+  margin: 10px;
+}
+>>>>>>> ea1342efd5ea3dfb2f98354de2a011280fe6400c

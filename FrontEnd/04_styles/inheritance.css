@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .main {
   /*폰트 지정*/
   font-family: sans-serif;
@@ -5,3 +6,12 @@
 
   display: inline-block;
 }
+=======
+.main {
+  /*폰트 지정*/
+  font-family: sans-serif;
+  color: #d93813;
+
+  display: inline-block;
+}
+>>>>>>> ea1342efd5ea3dfb2f98354de2a011280fe6400c

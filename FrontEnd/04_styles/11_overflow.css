@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
   box-sizing: border-box;
 }
@@ -29,3 +30,36 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+=======
+* {
+  box-sizing: border-box;
+}
+img {
+  vertical-align: bottom;
+}
+.inline-box {
+  display: inline-block;
+  padding: 10px;
+  background-color: #fae;
+  vertical-align: top;
+}
+.overflow {
+  width: 100px;
+  height: 100px;
+  overflow: auto;
+}
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 200px;
+  /*줄바꿈 하지 말아라*/
+  white-space: nowrap;
+}
+.list > li {
+  padding: 10px;
+  background-color: rgb(250, 228, 244);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+>>>>>>> ea1342efd5ea3dfb2f98354de2a011280fe6400c

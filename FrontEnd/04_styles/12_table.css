@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*비율 단위로 col들이 자리를 차지하게 된다*/
 .grid {
   width: 100%;
@@ -34,3 +35,41 @@
 .grid > tbody > tr > td:last-child {
   border-right: 0;
 }
+=======
+/*비율 단위로 col들이 자리를 차지하게 된다*/
+.grid {
+  width: 100%;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  /*테이블 사이의 공백 없애기*/
+  border-collapse: collapse;
+}
+.grid > thead {
+  background-color: #fff;
+}
+/*th에 적용해야만 border가 보임*/
+.grid > thead > tr > th {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  border-right: 1px dashed #eee;
+  font-weight: 700;
+}
+.grid > thead > tr > th:last-child {
+  border-right: 0;
+}
+.grid > tbody > tr:nth-child(odd) {
+  background-color: #f3f3f3;
+}
+.grid > tbody > tr:hover {
+  background-color: #d3d3d3;
+}
+.grid > tbody > tr > td {
+  padding: 10px 0 10px 10px;
+  border-bottom: 1px dashed #eee;
+  border-right: 1px dashed #eee;
+  white-space: nowrap;
+}
+.grid > tbody > tr > td:last-child {
+  border-right: 0;
+}
+>>>>>>> ea1342efd5ea3dfb2f98354de2a011280fe6400c
