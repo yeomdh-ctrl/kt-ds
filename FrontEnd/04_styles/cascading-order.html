@@ -1,0 +1,34 @@
+<!doctype html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Castcading Order 실습</title>
+    <!-- External Style : 우선순위 => 가장 낮음(3)-->
+    <link rel="stylesheet" type="text/css" href="./external.css" />
+    <!-- Internal Style : 우선순위 두 번째로 높음(2)-->
+     <style type="text/css">
+      #header {
+        background-color: #ff00ff;
+        color: #ffff00;
+      }
+     </style>
+  </head>
+  <body>
+    <!-- Inline Style : 우선순위 가장 높음(1)-->
+    <div id="header" style="background-color: #000000; color: #ffffff">
+      Header 영역
+      <p class="header--logo">로고 영역입니다.</p>
+    </div>
+    <div id="main-container">
+      Main-Container 영역
+      <p class="main-container--content"></p>
+    </div>
+    <div id="footer">
+      Footer 영역
+      <ul class="footer-links">
+        <li class="footer-links--link">Item1</li>
+        <li class="footer-links--link">Item2</li>
+        <li class="footer-links--link">Item3</li>
+      </ul>
+    </div>
+  </body>
+</html>

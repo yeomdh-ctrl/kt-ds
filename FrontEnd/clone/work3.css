@@ -1,0 +1,111 @@
+/* 전체 배경 */
+body {
+  background-color: #525252;
+  margin-top: 0;
+}
+
+/* 흰색 배경 */
+.container {
+  width: 700px;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 노란색 배너 */
+.yellow-header {
+  background-color: #fce14b;
+  height: 45px;
+}
+
+/* 구분선 */
+.divine-line {
+  height: 45px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* 강원도 된장 칸 */
+.board {
+  padding: 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* 게시글 제목 */
+.title {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #333333;
+}
+
+/* [17] */
+.count {
+  color: #d9534f;
+  font-size: 13px;
+  margin-left: 2px;
+}
+
+/* 게시글 정보 행 (카테고리, 번호, 시간 등) */
+.content {
+  font-size: 11px;
+  color: #999999;
+}
+
+/* 개드립 */
+.category {
+  color: #c78065;
+}
+
+/* | */
+.up-divine {
+  color: #e0e0e0;
+  margin: 0 6px;
+  font-size: 10px;
+}
+
+.left-top {
+  float: left;
+  width: 80px;
+  height: 35px;
+  background-image: url(https://www.goodgag.net/_tpl/v3/_css/common.1px.png);
+  background-repeat: no-repeat;
+  background-size: 131px 114px;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.right-top,
+.right-top2,
+.right-top3 {
+  float: right;
+  margin: 8px 6px 0 0;
+}
+.right-top {
+  width: 30px;
+  height: 27px;
+  background-image: url(https://www.goodgag.net/_tpl/for_app/_images/_common/ps.svg);
+  background-repeat: no-repeat;
+  background-size: 23px 20px;
+  background-position: 4px 4px;
+  border: 1px solid #d39f25;
+  background-color: #fed000;
+  border-radius: 3px;
+}
+.right-top2 {
+  width: 38px;
+  height: 29px;
+  background-image: url(https://www.goodgag.net/_tpl/v3/_css/common.1px.png);
+  background-repeat: no-repeat;
+  background-size: 131px 114px;
+  background-position: 0px -38px;
+}
+
+.right-top3 {
+  width: 35px;
+  height: 30px;
+
+  background-image: url(https://www.goodgag.net/_tpl/v3/_css/common.1px.png);
+  background-repeat: no-repeat;
+  background-size: 131px 114px;
+
+  background-position: -41px -38px;
+}

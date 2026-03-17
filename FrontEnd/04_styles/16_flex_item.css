@@ -1,0 +1,10 @@
+.flex > li {
+  /*아이템의 최소 크기 지정: 메인축에 따라 weight 혹은 height*/
+  flex-basis: 100px;
+}
+.flex {
+  flex-wrap: nowrap;
+}
+.vertical {
+  flex-direction: column;
+}

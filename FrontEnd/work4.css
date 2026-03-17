@@ -1,0 +1,129 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+.layout {
+  display: grid;
+  width: 1000px;
+  height: 1000px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 5fr 1fr 3fr 3fr 3fr 0.1fr 1fr;
+  gap: 1rem;
+}
+li {
+  font-size: 0.8rem;
+}
+.left-header {
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+.right-header {
+  grid-column: 3/5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+.yellow {
+  grid-column: 1/3;
+  background-color: yellow;
+}
+.blue {
+  grid-column: 3/5;
+  background-color: blue;
+}
+.check {
+  display: flex;
+  flex-direction: row;
+  grid-column: 1/3;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #999;
+}
+.check > .check-onemore {
+  border: 1px solid rgb(34, 199, 34);
+  border-radius: 20px;
+  background-color: rgb(34, 199, 34);
+  color: #fff;
+  padding: 0.625rem 1.2rem;
+}
+.right-check {
+  display: flex;
+  flex-direction: row;
+  grid-column: 3/5;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #999;
+}
+.right-check > .free {
+  border: 1px solid rgb(146, 34, 221);
+  border-radius: 20px;
+  background-color: rgb(146, 34, 221);
+  color: #fff;
+  padding: 0.625rem 1.2rem;
+}
+
+.footer-left {
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: #ddd;
+}
+
+.footer-right {
+  grid-column: 3/5;
+}
+span:not(.delete, .red) {
+  color: #fff;
+  border: 1px solid rgb(34, 199, 34);
+  background-color: rgb(34, 199, 34);
+  border-radius: 100%;
+}
+.vertical-line {
+  color: #ddd;
+  font-size: 0.625rem;
+}
+.product-left {
+  background-image: url(./nugget.png);
+  background-size: 46%;
+  background-repeat: no-repeat;
+}
+.product-left,
+.product-right > div {
+  padding-left: 110px;
+  font-size: 0.7rem;
+}
+.delete {
+  text-decoration: line-through;
+  color: #ccc;
+}
+.red {
+  color: rgb(228, 27, 27);
+}
+.product-right {
+  background-image: url(./tissue.png);
+  background-size: 46%;
+  background-repeat: no-repeat;
+}
+.left-description {
+  grid-column: 1/3;
+  color: #999;
+  font-size: 0.9rem;
+}
+.right-description {
+  grid-column: 3/5;
+  color: #999;
+  font-size: 0.9rem;
+}

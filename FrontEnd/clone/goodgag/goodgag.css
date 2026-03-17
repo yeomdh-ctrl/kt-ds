@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100vh; /*내용이 적더라도 여백을 유지할 수 있도록 html, body, wrapper에 설정*/
+}
+body {
+  background-color: #484646;
+  margin: 0;
+  height: 100vh;
+  /*폰트 우선 순위*/
+  font-family: "Black Han Sans", sans-serif;
+}
+.wrapper {
+  width: 42.5rem;
+  margin: 0 auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column; /*메인축이 y축*/
+  height: 100vh;
+}
+.header {
+  flex-basis: 2.5rem; /*메인축이 y축이기 때문에 height를 주고 싶다면 flex-basis를 주면 된다.*/
+  background-color: #ebbc12;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 0.625rem;
+  gap: 0.325rem; /*flex의 아이템들이 적당한 간격으로 떨어지게 함*/
+  flex-shrink: 0; /*크기 변화에 영향을 받지 않도록 설정*/
+}
+.header > .logo {
+  flex-basis: 5.125rem; /*flex에서 width를 주기 위해서 사용*/
+  height: 2.1875rem;
+  background-image: url("./common.1px.png");
+  background-repeat: no-repeat;
+}
+.header > .space {
+  flex-grow: 1; /*남아있는 여백을 전부 다 가져가라*/
+}
+.header > .bookmark {
+  flex-basis: 1.1875rem;
+  height: 1.1875rem;
+}
+.header > .my {
+  flex-basis: 2.375rem;
+  height: 1.8125rem;
+  background-image: url("./common.1px.png");
+  background-repeat: no-repeat;
+  background-position: 0 -38px;
+}
+.header > .write {
+  flex-basis: 2.0625rem;
+  height: 1.8125rem;
+  background-image: url("./common.1px.png");
+  background-repeat: no-repeat;
+  background-position: -41px -38px;
+}
+.type {
+  background-color: #eee;
+  display: flex;
+  flex-direction: row;
+  flex-basis: 2.5rem;
+  justify-content: space-evenly;
+  line-height: 37px; /*0px을 주고 개발자 도구에서 값을 변경하며 박스가 안커지는 선에서 위치를 조정*/
+  flex-shrink: 0;
+}
+.type > div {
+  flex-basis: 17rem; /*type의 flex-direction이 row이기 때문에 width를 주고 싶다면 flex-basis 사용*/
+  text-align: center;
+  font-size: 1.1rem;
+}
+.type > .selected {
+  font-weight: 700;
+  color: #ff605d;
+  border-bottom: 3px solid #ff605d;
+}
+.articles {
+  margin-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /*여백이 있다면 모두 가져가도록 처리. 이렇게 하면 footer 위에 여백이 생김*/
+  flex-shrink: 0;
+}
+.articles > .article {
+  flex-basis: 2.83625rem;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-sizing: content-box; /*padding을 주니까 컨텐츠가 작아지는 문제가 있어서 height를 조정하던가 box-sizing을 content-box로 수정*/
+  padding: 0.625rem 0;
+}
+.articles > .article > .article-title {
+  display: flex;
+  flex-direction: row;
+  color: #333;
+}
+.articles > .article > .article-title > div:last-child {
+  color: #ff5500;
+}
+.articles > .article > .article-title > div:last-child::before {
+  content: "[";
+  margin-left: 0.625rem;
+}
+.articles > .article > .article-title > div:last-child::after {
+  content: "]";
+}
+.articles > .article > .article-author {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+.articles > .article > .article-author > .article-author-name {
+  color: #ff605d;
+}
+.articles > .article > .article-author > div:not(.article-author-date)::after {
+  content: "|";
+  color: #ddd;
+  margin: 0 0.625rem;
+}
+.page-navigator {
+  flex-basis: 4.375rem;
+  background-color: #ccc;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+}
+.page-navigator > a {
+  line-height: 120%;
+  padding: 0.35rem 0.625rem;
+  border: 1px solid #aaa;
+  border-radius: 0.25rem;
+  background-color: #eee;
+  color: #777;
+  text-decoration: none;
+}
+.page-navigator > a:first-child {
+  color: #ff605d;
+  border-color: #ff605d;
+  font-weight: 600;
+}
+.footer {
+  flex-basis: 7.5rem;
+  background-color: #333;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+.footer > div:first-child {
+  background-color: #555;
+  padding: 0.625rem;
+  border-radius: 0.5rem;
+  color: #999;
+}
+.footer > div:last-child {
+  color: #555;
+  padding: 1.25rem;
+}
