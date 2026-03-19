@@ -1,0 +1,100 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #f14c4c;
+  margin: 10px;
+}
+.translate {
+  /*박스 이동 translate(x, y)*/
+  transform: translate(100px, 100px);
+  background-color: aqua;
+}
+.scale {
+  /*박스 크기 조정 scale(x, y)*/
+  /*x축으로는 2배, y축으로는 1배*/
+  transform: scale(2, 2) translate(200px, 200px);
+  background-color: cornflowerblue;
+}
+.rotate {
+  /*박스 회전 rotate(회전각 <- deg, turn)*/
+  /* transform: rotate(45deg); */
+  transform: rotate(0.125turn);
+  background-color: darkgoldenrod;
+}
+.invert {
+  /* transform: scale(-1, 1); -> 글씨까지 뒤집어짐*/
+  transform: rotate(180deg);
+  background-color: chartreuse;
+}
+
+/*자연스럽게 배경색 변경되게 하기*/
+.change-color {
+  transition: background-color 1s;
+}
+.change-color:hover {
+  background-color: #fff;
+}
+/*크기 변경(뒤에 입력하는 값은 dealy)*/
+.change-scale {
+  transition:
+    transform 1s 0.3s,
+    background-color 1s;
+}
+.change-scale:hover {
+  background-color: brown;
+  transform: scale(2, 2);
+}
+/*이미지 회전 시키기*/
+img {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+  border: 1px solid #999;
+}
+.change-rotate {
+  transition: transform 0.3s;
+}
+.change-rotate:hover {
+  transform: rotate(360deg);
+}
+
+.animate-rotate {
+  overflow: hidden;
+}
+.animate-rotate:hover {
+  /*마우스를 올렸을 때 0.5s의 딜레이로 끊기지 않고 무한으로 돌기*/
+  animation: notion-rotate-and-scale 0.5s linear infinite;
+}
+@keyframes notion-rotate-and-scale {
+  0% {
+    transform: rotate(0deg) scale(1, 1) translate(0, 0);
+    border-radius: 0px;
+  }
+  50% {
+    transform: rotate(180deg) scale(2, 2) translate(50px, 50px);
+    border-radius: 50%;
+  }
+  100% {
+    transform: rotate(360deg) scale(1, 1) translate(0, 0);
+    border-radius: 0px;
+  }
+}
+@keyframes notion-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hover-me {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.hover-me > img {
+  transition: transform 3s;
+}
+.hover-me:hover > img {
+  transform: scale(1.2, 1.2) rotate(30deg);
+}

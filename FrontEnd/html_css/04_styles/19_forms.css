@@ -1,0 +1,65 @@
+/* input[type="text"] {
+  width: 100%;
+} */
+/*input 태그인데 type은 text이고 maxlength라는 속성이 존재하면 스타일링.*/
+/* input[type="text"][maxlength] {
+  background-color: aqua;
+} */
+/*input 태그인데 type은 text이고 maxlength는 20이면 스타일링.*/
+/* input[type="text"][maxlength="20"] {
+  padding: 10rem;
+}
+
+input[type="number"] {
+  padding: 0.625rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+} */
+/*클릭 했을 때 나오게 하기*/
+/* input[type="number"]:focus {
+  outline: 0;
+  box-shadow: 0px 0px 1rem rgb(129, 209, 255);
+} */
+.grid {
+  display: grid;
+  grid-template-columns: minmax(6.25rem, auto) 1fr;
+  row-gap: 0.625rem;
+  align-items: center;
+}
+input[type="email"],
+input[type="password"] {
+  padding: 0.4rem 0.625rem;
+  outline: 0;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: none;
+}
+/*radio는 appearance가 정해져 있어서 꾸밀 수 없기 때문에 label을 꾸며준다*/
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+  display: inline-block;
+  padding: 0.3rem 0.625rem;
+  border: 1px solid rgb(58, 224, 58);
+}
+input[type="radio"]:checked + label,
+input[type="checkbox"]:checked + label {
+  color: red;
+  border: 1px solid red;
+}
+select {
+  padding: 0.625rem;
+  outline: 0;
+  background-color: blanchedalmond;
+  border: 1px solid burlywood;
+  border-radius: 0.5rem;
+  color: #aaa;
+}
+textarea {
+  box-sizing: border-box;
+  padding: 0.625rem;
+  max-width: 100%;
+  min-width: 100%;
+  border: 1px solid #0ff;
+}

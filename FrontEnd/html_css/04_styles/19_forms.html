@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Forms</title>
+    <link rel="stylesheet" type="text/css" href="./19_forms.css" />
+  </head>
+  <body>
+    <div>
+      <div class="grid">
+        <label for="email">이메일</label>
+        <input id="email" type="email" />
+        <label for="password">비밀번호</label>
+        <input id="password" type="password" />
+        <label for="male">성별</label>
+        <div>
+          <!--이름(name)이 같으면 하나만 선택되게 할 수 있음-->
+          <input type="radio" name="gender" id="male" />
+          <label for="male">남</label>
+          <input type="radio" name="gender" id="female" /><label for="female"
+            >여</label
+          >
+        </div>
+        <label for="instagram">가입경로</label>
+        <div>
+          <input type="checkbox" name="channel" id="instagram" />
+          <label for="instagram">인스타그램</label>
+          <input type="checkbox" name="channel" id="X" />
+          <label for="X">X</label>
+          <input type="checkbox" name="channel" id="friend" />
+          <label for="friend">지인 소개</label>
+          <input type="checkbox" name="channel" id="youtube" />
+          <label for="youtube">유튜브</label>
+        </div>
+
+        <label for="jobs">직업</label>
+        <select id="jobs">
+          <option>(선택)</option>
+          <option>관련산업 종사자</option>
+          <option>일반인</option>
+          <option>학생</option>
+          <option>기타</option>
+        </select>
+
+        <label for="other">하고 싶은 말</label>
+        <textarea id="other"></textarea>
+      </div>
+    </div>
+  </body>
+</html>

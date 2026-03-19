@@ -1,0 +1,59 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: 0.625rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+.form > .basic-info {
+  display: grid;
+  grid-template-columns: 3.125rem 1fr minmax(3.125rem, auto);
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  outline: 0;
+  height: 100px;
+}
+.form > .personal-info {
+  display: grid;
+  grid-template-columns: 3.125rem 1fr;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  outline: 0;
+  height: 150px;
+}
+.form > .tel-info,
+.form > .agreement-info {
+  border: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: 3.125rem 1fr;
+  border-radius: 0.5rem;
+}
+input[type="radio"] {
+  display: none;
+}
+input[type="radio"] + label {
+  display: inline-block;
+  border: 1px solid #ddd;
+  color: #ddd;
+  padding: 0.3rem 0.625rem;
+  border-radius: 0.5rem;
+}
+input[type="radio"]:checked + label {
+  color: #0f0;
+  border: 1px solid #0f0;
+}
+.form > .personal-info > .region {
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+input,
+select,
+span,
+label {
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}

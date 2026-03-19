@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Naver</title>
+    <link rel="stylesheet" type="text/css" href="./18_naver_form.css" />
+  </head>
+  <body>
+    <div class="form">
+      <div class="basic-info">
+        <label for="user-id">i</label>
+        <input type="text" name="user-id" placeholder="아이디" />
+        <span>@naver.com</span>
+        <label for="user-password">p</label>
+        <input type="password" name="user-password" placeholder="비밀번호" />
+        <span></span>
+        <label for="user-email">e</label>
+        <input
+          type="email"
+          name="user-email"
+          placeholder="[선택] 이메일주소 (비밀번호 찾기 등 본인 확인용)"
+        />
+        <span></span>
+      </div>
+      <div class="personal-info">
+        <label>n</label>
+        <input type="text" name="name" placeholder="이름" />
+        <label>b</label>
+        <input type="datetime" name="birthday" placeholder="생년월일 8자리" />
+        <label>t</label>
+        <select>
+          <option>통신사 선택</option>
+          <option>SKT</option>
+          <option>SKT 알뜰폰</option>
+          <option>KT</option>
+          <option>KT 알뜰폰</option>
+          <option>LG U+</option>
+          <option>LG U+ 알뜰폰</option>
+        </select>
+        <div class="region">
+          <input type="radio" name="gender" id="male" />
+          <label for="male">남자</label>
+          <input type="radio" name="gender" id="female" />
+          <label for="female">여자</label>
+          <input type="radio" name="country" id="in" />
+          <label for="in">내국인</label>
+          <input type="radio" name="country" id="foreign" />
+          <label for="foreign">외국인</label>
+        </div>
+      </div>
+      <div class="tel-info">
+        <label>tel</label>
+        <input type="tel" class="telephone" placeholder="휴대전화번호" />
+      </div>
+      <div class="agreement-info">
+        <label><input type="checkbox" name="checkbox" /></label>
+        <select>
+          <option>[필수] 인증 약관 전체동의</option>
+          <option>개인정보 이용></option>
+          <option>고유식별정보 처리></option>
+          <option>통신사 이용약관></option>
+          <option>인증사 이용약관></option>
+          <option>네이버 개인정보 수집></option>
+        </select>
+      </div>
+    </div>
+  </body>
+</html>
