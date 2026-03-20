@@ -1,0 +1,16 @@
+div:not(.header),
+li {
+  border: 1px solid #000;
+  padding: 1rem;
+  margin: 1rem;
+}
+.wrapper,
+.category {
+  width: auto;
+  height: auto;
+  list-style: none;
+}
+div > .header {
+  display: flex;
+  flex-direction: row;
+}
