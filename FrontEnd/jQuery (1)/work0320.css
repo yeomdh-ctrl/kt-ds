@@ -14,7 +14,7 @@ div > .header {
   display: flex;
   flex-direction: row;
 }
-.category li:hover{
+.category li:hover {
   background-color: rgb(219, 37, 137);
   color: #fff;
 }
